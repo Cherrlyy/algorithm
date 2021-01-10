@@ -1,4 +1,3 @@
-
 def isPalindrome(s: list) -> bool:
     if len(s) <= 1:
         return True
