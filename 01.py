@@ -1,15 +1,18 @@
-def isPalindrome(s: list) -> bool:
-    if len(s) <= 1:
-        return True
-    print(s[0] + ", " + s[-1] + " is " , s[0] == s[-1])
-    # print(strs[0] == strs[-1])
-    return (s[0] == s[-1]) & isPalindrome(s[1:-1])
+a = [1, 2, 3]
+b = a[:]
 
-s = input("")
-strs = []
+print(id(a))
+print(id(b))
+# a[:] = a[::-1]
+# print(a)
 
-for char in s:
-    if char.isalnum():
-        strs.append(char.lower())
-is_bool = isPalindrome(strs)
-print(is_bool)
+a = [1, 2, 3, 4]
+print(id(a))
+print(id(a[:]))
+a.remove(2)
+print(a)
+print(id(a))
+print("-----")
+print(id([1, 2]))
+print(id([1, 2]))
+
